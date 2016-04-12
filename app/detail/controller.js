@@ -8,4 +8,13 @@ export default Ember.Controller.extend({
       });
     }
   },
+
+  saveComment(blog, username, content) {
+    const comment = this.store.createRecord(`comment`, {username, content, blog});
+
+    comment.save().then(() => {
+      this.set(`newCommentContent`, '');
+      this.set(`newCommentUsername`, '');
+    });
+  }
 });

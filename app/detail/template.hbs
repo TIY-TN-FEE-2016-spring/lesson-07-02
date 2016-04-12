@@ -7,5 +7,21 @@
   {{/each}}
 </ul>
 
+<form {{action saveComment model newCommentUsername newCommentContent on="submit"}}>
+  <h3>Add your voice</h3>
+
+  <p>
+    <label>Username</label>
+    {{input value=newCommentUsername}}
+  </p>
+
+  <p>
+    <label>Content</label>
+    {{input value=newCommentContent}}
+  </p>
+
+  <button>Save</button>
+</form>
+
 {{#link-to "index"}}Back{{/link-to}}
 <button {{action deleteRecord model}}>Delete</button>
