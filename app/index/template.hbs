@@ -1,5 +1,9 @@
 {{outlet}}
 
 {{#each model as |blog|}}
-  <li>{{blog.title}}</li>
+  <li>
+    {{#link-to "detail" blog.id}}
+      {{blog.title}}
+    {{/link-to}}
+  </li>
 {{/each}}
