@@ -1,5 +1,11 @@
 <h2>{{model.title}}</h2>
 <p>{{model.content}}</p>
 
+<ul class="comments">
+  {{#each model.comments as |comment|}}
+    <li>{{comment.username}}</li>
+  {{/each}}
+</ul>
+
 {{#link-to "index"}}Back{{/link-to}}
 <button {{action deleteRecord model}}>Delete</button>
