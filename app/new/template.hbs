@@ -1,11 +1,11 @@
-<form{{action saveBlog title content on="submit"}}>
+<form{{action saveBlog model.title model.content on="submit"}}>
   <p>
     <label>That's the label for our title</label>
-    {{input value=title}}
+    {{input value=model.title}}
   </p>
   <p>
     <label>That's the label for our content</label>
-    {{textarea value=content}}
+    {{textarea value=model.content}}
   </p>
 
   <p>
