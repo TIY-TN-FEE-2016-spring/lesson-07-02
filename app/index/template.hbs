@@ -1,5 +1,11 @@
 {{outlet}}
 
+<p>
+  {{#link-to "new"}}
+    <span class="fa fa-plus"></span>
+  {{/link-to}}
+</p>
+
 {{#each model as |blog|}}
   <li>
     {{#link-to "detail" blog.id}}
