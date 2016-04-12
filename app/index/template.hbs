@@ -1,5 +1,5 @@
 {{outlet}}
 
-{{#each model.data as |blog|}}
-  <h1>{{blog.attributes.title}}</h1>
+{{#each model as |blog|}}
+  <li>{{blog.title}}</li>
 {{/each}}
